@@ -1,7 +1,9 @@
 package it.johnson.demo.controller;
 
 import it.johnson.demo.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
     private final GreetingService greetingService;
 

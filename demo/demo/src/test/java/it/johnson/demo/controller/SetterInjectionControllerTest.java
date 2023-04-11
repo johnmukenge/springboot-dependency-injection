@@ -3,19 +3,16 @@ package it.johnson.demo.controller;
 import it.johnson.demo.services.GreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 class SetterInjectionControllerTest {
 
+    @Autowired
     SetterInjectionController setterInjectionController;
-
-    @BeforeEach
-    void setUp(){
-
-        setterInjectionController = new SetterInjectionController();
-        setterInjectionController.setGreetingService(new GreetingServiceImpl());// if you don't set the impl you'll get a nullpointer
-    }
 
     @Test
     void sayHello() {
